@@ -1,0 +1,11 @@
+I've split my config like this:
+
+ ~/.zshrc      - script that loads up functions and rc files
+ ~/.zshenv     - used for non-interactive mode
+ ~/.zsh/func   - all functions
+ ~/.zsh/rc     - configuration split by topic
+
+You'll have to take the files in this folder and install them
+appropriately on your sytem.
+
+-Bart <bart@jukie.net>

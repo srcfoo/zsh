@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+if [[ -d $HOME/proj/android ]] ; then
+
+        ANDROID_SDK="$HOME/proj/android/sdk/android-sdk"
+        ANDROID_NDK="$HOME/proj/android/sdk/android-ndk"
+        JUKIE_MYDROID="/home/jukie/bart/proj/android/mydroid"
+
+        asdk_bin=${ANDROID_SDK}/tools
+        [[ -d "${asdk_bin}" ]] && export PATH="${PATH}:${asdk_bin}"
+        unset asdk_bin
+
+        #andk_bin=${ANDROID_NDK}/build/prebuilt/linux-x86/arm-eabi-4.2.1/bin
+        #[[ -d ${PATH}:${andk_bin} ]] && export PATH=${PATH}:${andk_bin}
+
+        function add-path-or-error() {
+                local new_path=$1
+                if [ -d $new_path ] ; then
+                        export PATH=${PATH}:${new_path}
+                        typeset -U path
+                else
+                        echo >&2 "There is no directory $new_path"
+                        return 1
+                fi
+        }
+
+        function set-mydroid-tool-path() {
+                local mydroid=${1:-${JUKIE_MYDROID}}
+                local rc=0
+                add-path-or-error "${mydroid}/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin" || rc=1
+                add-path-or-error "${mydroid}/out/host/linux-x86/bin"                          || rc=1
+                return $rc
+        }
+fi

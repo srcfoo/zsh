@@ -1,0 +1,17 @@
+#autoload -U
+#vim: set ft=zsh
+
+#alias vnice="ionice -n7" and "nice -n20"
+
+if [[ -z "$1" ]] ; then
+        echo "vnice [ <pid>... | <program> ]" >&2
+        return 1
+elif [[ "$1" =~ ^[0-9]+$ ]] ; then
+        while [[ "$1" =~ ^[0-9]+$ ]] ; do
+                ionice -n7 -p $1
+                renice 20 $1
+                shift
+        done
+else
+        ionice -n7 nice -n20 $@
+fi

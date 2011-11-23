@@ -1,0 +1,147 @@
+vi .zshenv
+man zsh
+git clone git://zsh.git.sf.net/gitroot/zsh/zsh
+vi install-sh
+grep -i configure
+grep -i configure *
+configure
+vi config.guess
+vi config.sub
+yum search autoconf
+sudo yum install autoconf
+autoconf -v
+grep -i git_prompt
+grep -i git_prompt *
+grep -ri git_prompt *
+grep -ri git_prompt .zsh/*
+cat .zshenv
+cat .zshrc
+less README
+cd www
+cd .zsh/rc
+echo $TERM
+grep -i vcs_info_msg_0_ *
+zsh -v
+wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.59.tar.gz
+tar xzf autoconf-2.59.tar.gz
+cd autoconf-2.59
+less INSTALL
+alias autoconf=~/local/bin/autoconf
+~/local/bin/autoconf --version
+rm autoconf-2.59 autoconf-2.59.tar.gz -rf
+cd ../local
+pwd
+rm -rf *
+cd src
+wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.68.tar.gz
+tar xzf autoconf-2.68.tar.gz
+cd autoconf-2.68
+./configure --prefix=/home/epeterson/local
+ls ~/local
+ls ~/local/bin
+autoconf --version
+cd zsh
+vi Util/preconfig
+ls -a
+find . -name .git
+cd .git
+vi config
+cd Util
+grep autoconf *
+vi check_exports
+git grep '2\.59'
+git grep AC_PREREQ
+vi configure.ac
+Util/preconfig
+./configure
+./configure --PREFIX=~/local
+./configure --prefix=~/local
+make
+echo $?
+vi Makefile
+make install
+git grep vcs_info
+grep vcs_info *
+grep vcs_info *|less
+./configure --help
+./configure --help|grep vnc
+run-help grep
+./configure --help|grep vcs
+./configure --help|less
+echo $VERSION
+env
+env|grep ZSH
+version
+mkdir -p local/bin local/etc
+cd local
+cd src/autoconf-2.68
+make uninstall
+cd ~/local
+ls bin
+ls share
+ls share/autoconf
+du -hs .
+cd bin
+./zsh
+echo $ZSH_VERSION
+cd www/webroot
+sudo vi /etc/passwd
+git commit -m "refs #6940 - adding validation for input parameters for User::loginFailed"
+ls ~/local/bin/
+env|grep git
+cd www/webroot/templates
+vi contactus.php
+grep -r GIT_EXEC_PATH
+grep -r GIT_EXEC_PATH *
+which git
+vi S55_git
+grep gitize *
+grep -r gitize *
+cd func
+cd ../rc
+grep -i git *
+top
+w
+vi conf.local.php
+vi conf.global.php
+cat /tmp/reserved_words_for_report_column_names.txt
+screen -r
+vi .vimrc
+cd local/bin
+./zsh --version
+which zsh
+zsh --version
+cd .zsh
+cd rc
+vi S60_prompt
+vi S20_environment
+ls /usr/local/libexec/git-core
+fg
+source ~/.zshrc
+env|grep -i git
+git s
+cd /opt/git/checkouts/dev1
+make log
+cd webroot
+vi -R login.php
+cd ..
+less php.log
+man less
+cd
+ssh 192.168.150.10
+l
+sls
+cd /opt/git/checkouts/qacurrent
+tail error_log
+tail php.log
+cd ../qanext
+ll
+cd /opt
+cd backup
+ls /tmp
+ls /tmp/ddezurik.restore.dump
+ls /tmp/*.dump
+cd /opt/git/checkouts
+cd dev1
+tail -111f php.log
+ls

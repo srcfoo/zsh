@@ -1,0 +1,4 @@
+#autoload -U
+#vim: set ft=zsh
+
+local d=$(xclip -o) ; echo $d ; eval cd "$d"

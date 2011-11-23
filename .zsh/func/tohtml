@@ -1,0 +1,9 @@
+#autoload -U
+#vim: set ft=zsh
+
+if test -z $1 ; then
+        echo "tohtml <file>" >&2
+        return 1
+fi
+
+vim -e +:TOhtml +w +qa $1

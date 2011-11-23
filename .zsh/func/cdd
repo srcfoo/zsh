@@ -1,0 +1,5 @@
+#autoload -U
+#vim: set ft=zsh
+
+# ccd x will do cd ../x
+alias cdd="cd `basename \`pwd\``"
